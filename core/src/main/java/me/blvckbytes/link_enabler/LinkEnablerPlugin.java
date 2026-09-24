@@ -36,6 +36,9 @@ public class LinkEnablerPlugin extends JavaPlugin {
   }
 
   private @Nullable PacketJsonRW decideJsonRW(ServerVersion version, Logger logger) {
+    if (version.compareTo(ServerVersion.V26_3) >= 0)
+      return new GTE_V26_3_PacketJsonRW(logger);
+
     if (version.compareTo(ServerVersion.V1_20_4) >= 0)
       return new GTE_V1_20_4_PacketJsonRW(logger);
 

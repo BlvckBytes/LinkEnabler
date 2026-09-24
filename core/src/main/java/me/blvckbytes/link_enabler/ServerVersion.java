@@ -11,6 +11,7 @@ public class ServerVersion implements Comparable<ServerVersion> {
 
   private static final Pattern MINECRAFT_VERSION_MATCHER = Pattern.compile("\\(MC: (\\d+\\.\\d+(?:\\.\\d+)?)");
 
+  public static final ServerVersion V26_3 = new ServerVersion(26, 3, 0);
   public static final ServerVersion V1_21_5 = new ServerVersion(1, 21, 5);
   public static final ServerVersion V1_20_4 = new ServerVersion(1, 20, 4);
   public static final ServerVersion V1_19_3 = new ServerVersion(1, 19, 3);
